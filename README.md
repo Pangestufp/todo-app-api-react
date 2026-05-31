@@ -1,16 +1,173 @@
-# React + Vite
+# Todo App API (React)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Simple Todo Application built with React 19 + Vite 8 and save data to backend.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Tech Stack
 
-## React Compiler
+- React 19
+- React Router DOM 7
+- Vite 8
+- Tailwind CSS 4
+- UUID
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## Requirements
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Node.js: 24.14.0
+- npm: 11.9.0
+
+---
+
+## Backend Setup
+
+Aplikasi ini memerlukan backend Todo API yang berjalan terlebih dahulu.
+
+Repository backend:
+
+```bash
+https://github.com/Pangestufp/todo-backend
+```
+
+Clone backend:
+
+```bash
+git clone https://github.com/Pangestufp/todo-backend
+```
+
+Masuk ke folder backend:
+
+```bash
+cd todo-backend
+```
+
+Install dependency:
+
+```bash
+npm install
+```
+
+Jalankan backend:
+
+```bash
+node index.js
+```
+
+Backend akan berjalan pada:
+
+http://localhost:3000
+
+Pastikan backend telah berjalan sebelum menjalankan aplikasi React.
+
+## Project Structure
+
+```txt
+src/
+│   ├── app/
+│       └── axios.js
+├── features/
+│   └── todo/
+│       ├── components/
+│       │   └── TodoCard.jsx
+│       │
+│       ├── hook/
+│       │   └── useTodo.js
+│       │
+│       ├── page/
+│       │   ├── TodoPage.jsx
+│       │   └── TodoFormPage.jsx
+│       │
+│       └── services/
+│           └── apiTodo.js
+│
+├── shared/
+│   ├── contextapi/
+│   │   └── Confirmcontext.jsx
+│   │
+│   ├── endpoint/
+│   │   └── endpoint.js
+│   │
+│   ├── routes/
+│   │   └── AppRouter.jsx
+│   │
+│   └── ui/
+│       ├── Button.jsx
+│       ├── Dropdown.jsx
+│       └── TextField.jsx
+│
+├── App.jsx
+├── App.css
+├── index.css
+└── main.jsx
+```
+
+
+---
+
+## Folder Description
+
+| Folder        | Description                                            |
+| ------------- | ------------------------------------------------------ |
+| app           | Menyimpan konfigurasi terutama untuk axios             |
+| assets        | Menyimpan aset gambar aplikasi                         |
+| features/todo | Modul utama fitur Todo                                 |
+| components    | Komponen UI khusus Todo                                |
+| hook          | Custom React Hook untuk manajemen state dan logic Todo |
+| page          | Halaman aplikasi                                       |
+| services      | Service untuk pengolahan data Todo                     |
+| shared        | Komponen dan utilitas yang dapat digunakan ulang       |
+| contextapi    | Global state menggunakan React Context                 |
+| routes        | Konfigurasi routing aplikasi                           |
+| ui            | Reusable UI Components                                 |
+
+---
+
+## Installation
+
+Clone repository:
+
+```bash
+git clone https://github.com/Pangestufp/todo-app-offline-react
+```
+
+---
+
+Masuk ke folder project:
+
+```bash
+cd frontend
+```
+
+---
+
+Install dependency:
+
+```bash
+npm install
+Running Application
+```
+
+---
+
+Environment Configuration:
+
+```bash
+cp .env.example .env
+```
+sesuaikan dengan base endpoint backend
+
+Jalankan development server:
+
+```bash
+npm run dev
+```
+
+---
+
+Aplikasi akan berjalan pada:
+
+http://localhost:5173
+
+
