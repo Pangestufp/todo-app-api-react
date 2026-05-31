@@ -129,7 +129,7 @@ src/
 Clone repository:
 
 ```bash
-git clone https://github.com/Pangestufp/todo-app-offline-react
+git clone https://github.com/Pangestufp/todo-app-api-react
 ```
 
 ---
@@ -137,7 +137,7 @@ git clone https://github.com/Pangestufp/todo-app-offline-react
 Masuk ke folder project:
 
 ```bash
-cd frontend
+cd todo-app-api-react
 ```
 
 ---
