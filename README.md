@@ -1,6 +1,8 @@
 # Todo App API (React)
 
-Simple Todo Application built with React 19 + Vite 8 and save data to backend.
+# Overview
+
+Aplikasi menggunakan arsitektur berbasis fitur (feature-based architecture) dengan pemisahan antara halaman, komponen, hook, dan service layer. Service layer bertanggung jawab untuk berkomunikasi dengan REST API menggunakan package axios.
 
 ---
 
